@@ -22,6 +22,11 @@ body {
   background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
+.container {
+  width: 90%;
+  margin-inline: auto;
+}
+
 .container > * {
   margin-bottom: 2rem;
 }
@@ -34,7 +39,7 @@ body {
 
 button {
   padding: 1rem 2rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   background: royalblue;
   border: 2px solid royalblue;
   cursor: pointer;
@@ -44,15 +49,59 @@ button {
 
 button:hover {
   transition: 120ms ease-in;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 3rem;
 }
 
 .success {
   transition: 120ms ease in;
   background: none;
   background-color: #5cb85c;
+}
+
+/* Animationer */
+
+.bounce {
+  animation: bounce 1300ms ease infinite;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.shake {
+  animation: shake 600ms ease;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
