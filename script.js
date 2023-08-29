@@ -40,7 +40,7 @@ function generateGuess(min, max) {
   return Math.floor((min + max) / 2);
 }
 
-// Alt efter hvordan brugeren klikker, vil computerGuess reguleres og lave et nyt max og min
+// Alt efter hvordan brugeren klikker, vil computerGuess reguleres og lave et nyt max og min ud fra det første gæt.
 guessButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const feedback = button.id;
